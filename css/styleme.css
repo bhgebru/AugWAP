@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*clearing browser default properties for the whole page*/
+body {
+  background-color: gray;
+/*  padding: 0;
+  margin: 0;*/
+  font-size: 14px;
+  color: white;
+  font-family: Arial, "Arial Black", Verdana, "Times New Roman";
+  margin-left: 25px;
+}
+
+hr {
+  color: white;
+}
+h1, h2, h3 {
+  color: lightblue;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+/* words that describe me */
+.personality{
+  font-style: italic;
+  font-weight: bold;
+  color: yellow;
+}
+/* unvisited link */
+
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+a{
+  text-decoration: none;
+}
+.about_class li {
+  list-style-type: square;
+}
+img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+img.footerImages {
+  width: auto;
+  height: auto;
+}
+feeling_content {
+  float: left;
+}
+.person_name {
+  font-family: "Times New Roman";
+  font-style: italic;
+  font-weight: bold;
+}
+.last_article.about_neighbors {
+  clear: both;
+}
+.img-with-text {
+  text-align: justify;
+  width: 100px;
+  display: flow;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto;
+}
+p:first-letter {
+/*  float: left;*/
+  font-size: 1.5em;
+/*  line-height: 1;*/
+  font-weight: bold;
+  margin-right: 9px;
+}
+dt {
+  color: yellow;
+  font-style: italic;
+}
+ol {
+  transform: rotate(180deg);
+}
+ol > li {
+  transform: rotate(-180deg);
+}
