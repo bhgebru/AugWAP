@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 8pt;
+  margin: 0;
+  border-width: 0;
+  padding: 0;
+  background-image: url("../img/background.png");
+  background-repeat: repeat;
+}
+#top_banner {
+  width: 100%;
+  height: 75px;
+  background-image: url("../img/bannerbg.png");
+  background-repeat: repeat-x;
+  vertical-align: center;
+}
+#top_banner img {
+  width: 100%;
+  height: 50px;
+}
+#main_body {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  border-style: ridge;
+  border-width: 4px;
+  border-color: gray;
+  padding:0;
+  /*background-color: darkseagreen;*/
+  overflow: hidden;
+}
+#page_title h1 {
+  text-align: center;
+  text-emphasis: #888888;
+  text-shadow: #999999;
+  font-size: 24pt;
+  font-family: Tahoma, Verdana, sans-serif;
+  text-shadow: 3px 3px #999999 ;
+  vertical-align: center;
+}
+#main_body_banner{
+  /*
+  background-image: url("../img/");
+  */
+}
+#main_body_banner {
+  background-color: green;
+  font-size: 48px;
+  color: red;
+  vertical-align: center;
+  background-image: url("../img/rbg.png");
+  background-repeat: repeat-x;
+}
+#main_body_banner img {
+  height: 83px;
+}
+#main_body_right {
+  float: right;
+  width: 25%;
+  padding: 0;
+  border-width: 0;
+  background-color: #A2B964;
+
+}
+#verifiers {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+#main_body_left{
+  width: 550px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0px;
+  column-count: 2;
+  column-gap: 2%;
+  background-image: url("../img/background.png");
+  background-repeat: repeat;
+}
+dt {
+  font-weight: bolder;
+  margin-top: 10px;
+}
+dd ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+#tmnt_poster_picture{
+  /*
+  height: 150px;
+  */
+}
+div.commented {
+  margin-right: 20px;
+}
+div.commented >p:first-child{
+  border-width: 2px;
+  border-style: groove;
+  border-color: gray;
+  border-radius: 10px;
+  padding-left: 5px;
+  margin-left: 5px;
+  background-color: #E8DC9B;
+  overflow: hidden;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div.commented >p:last-child {
+  margin-left: 10px;
+
+}
+div.commented img:last-child:after {
+  scroll-margin-left: 20px;
+}
+.commented img {
+  float: left;
+  margin-right: 5px;
+}
+img {
+  opacity: 0.5;
+}
+q {
+  font-size: 8pt;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+  padding-top: 10px;
+  margin-top: 10px;
+  font-family: Arial;
+}
