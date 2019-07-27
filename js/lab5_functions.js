@@ -41,18 +41,14 @@ function isVowel(str) {
 function sum(numbers ) {
   if(! Array.isArray(numbers) )
     return 0;
-  var resultSum=0;
-  for(var i=0; i < numbers.length; i++)
-    resultSum+= numbers[i];
-  return resultSum;
+  var totalSum = numbers.reduce(function (accumulator, num) {
+    return accumulator + num; }, 0);
+  return totalSum;
 }
 function multiply(numbers ) {
   if(! Array.isArray(numbers))
     return 1;
-  var resultProduct=1;
-  for(var i=0; i < numbers.length; i++)
-    resultProduct = resultProduct * numbers[i];
-  return resultProduct;
+  return getArrayProduct(numbers);
 }
 function reverse(str) {
   var res="";
@@ -93,4 +89,18 @@ function getArrayProduct(numArray) {
   var totalProduct = numArray.reduce(function (accumulator, num) {
     return accumulator * num; }, 1);
   return totalProduct;
+}
+function areEqualArrays(array1, array2) {
+  try{
+    if(! Array.isArray(array1))   return false;
+    if(! Array.isArray(array2))   return false;
+    if(array1.length != array2.length)
+      return false;
+    for(var i=0; i < array1.length; i++ )
+      if(array1[i] !== array2[i])
+        return false;
+      return true;
+  }catch(e) {
+    return false;
+  }
 }
