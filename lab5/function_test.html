@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="../js/lab5_functions.js" type="text/javascript" >
+
+  </script>
+    <script >
+      console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+      console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
+      console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
+      console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
+      console.log("Expected output of isVowel('s') is false  " + myFunctionTest(false, isVowel("s")));
+      console.log("Expected output of isVowel('e') is true  " + myFunctionTest(true, isVowel("e")));
+      console.log("Expected output of isVowel('eb') is false  " + myFunctionTest(true, isVowel("eb")));
+      console.log("Expected output of sum('[1,2,3]') is 6  " + myFunctionTest(6, sum([1,2,3])));
+      console.log("Expected output of sum('[1,2,3]') is 6  " + myFunctionTest(8, sum([1,2,3])));
+      console.log("Expected output of multiply('[1,2,3,4]') is 24  " + myFunctionTest(24, multiply([1,2,3, 4])));
+      console.log("Expected output of multiply('[1,2,3,4]') is 24  " + myFunctionTest(12, multiply([1,2,3, 4])));
+      console.log("Expected output of reverse('abcde') is 'edcba'  " + myFunctionTest('edcba', reverse('abcde')));
+      console.log("Expected output of reverse('abcde') is 'edcba'  " + myFunctionTest('dcba', reverse('abcde')));
+      console.log("Expected output of findLongestWord(['a', 'bcd','de']) is '3'  " + myFunctionTest(3, findLongestWord(['a', 'bcd','de'])));
+      console.log("Expected output of findLongestWord(['a', 'bcd','de']) is '3'  " + myFunctionTest(2, findLongestWord(['a', 'bcd','de'])));
+      console.log("Expected output of filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid']) is '[bcd, ABEBE, kid]'  " + myFunctionTest(['bcd','ABEBE','kid'], filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid'],3)));
+      console.log("Expected output of filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid']) is '[bcd, ABEBE, kid]'  " + myFunctionTest(['bcd','ABEBE'], filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid'],3)));
+      console.log("Expected output of getMultipliedBy10('[1,2,3]') is '[10, 20, 30]'  " + myFunctionTest([10, 20, 30], getMultipliedBy10([1,2,3])));
+      console.log("Expected output of getMultipliedBy10('[1,2,3]') is '[10, 20, 30]'  " + myFunctionTest([1, 20, 30], getMultipliedBy10([1,2,3])));
+      console.log("Expected output of getElementsEqualtoThree('[1,2,3, 3]') is '[3, 3]'  " + myFunctionTest([3, 3], getElementsEqualtoThree([1,2,3, 3])));
+      console.log("Expected output of getElementsEqualtoThree('[1,2,3, 3]') is '[3, 3]'  " + myFunctionTest([3], getElementsEqualtoThree([1,2,3, 3])));
+      console.log("Expected output of getArrayProduct('[1,2,3,4]') is 24  " + myFunctionTest(24, getArrayProduct([1,2,3, 4])));
+      console.log("Expected output of getArrayProduct('[1,2,3,4]') is 24  " + myFunctionTest(12, getArrayProduct([1,2,3, 4])));
+
+
+    </script>
+    
+</head>
+<body>
+Lookin the Chrome developer console to see the output. CTRL_SHIFT_J
+
+</body>
+</html>
