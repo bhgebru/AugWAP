@@ -8,30 +8,52 @@
   </script>
     <script >
       console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+
+      console.log("Expected output of max(20,10) is 20  " + myFunctionTest(10, max(20, 10)));
+      console.assert(10 === max(20, 10), "Assertion Failed. Because 10 is not the max in " + '[20, 10]');
+
       console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
-      console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
       console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
+      console.assert(4 === maxOfThree(55, 4, 44), "Assertion Failed. Because 4 is not the max in " + '[55, 4, 44]');
+
       console.log("Expected output of isVowel('s') is false  " + myFunctionTest(false, isVowel("s")));
       console.log("Expected output of isVowel('e') is true  " + myFunctionTest(true, isVowel("e")));
       console.log("Expected output of isVowel('eb') is false  " + myFunctionTest(true, isVowel("eb")));
+      console.assert(true === isVowel("eb"), "Assertion Failed. Because 'eb' is not a vowel ");
+
       console.log("Expected output of sum('[1,2,3]') is 6  " + myFunctionTest(6, sum([1,2,3])));
       console.log("Expected output of sum('[1,2,3]') is 6  " + myFunctionTest(8, sum([1,2,3])));
+      console.assert(4 === sum([1,2,3]), "Assertion Failed. Because sum of '[1,2,3]' is not 4");
+
+
       console.log("Expected output of multiply('[1,2,3,4]') is 24  " + myFunctionTest(24, multiply([1,2,3, 4])));
       console.log("Expected output of multiply('[1,2,3,4]') is 24  " + myFunctionTest(12, multiply([1,2,3, 4])));
+      console.assert(6 === multiply([1,2,3, 4]), "Assertion Failed. Because Multiplication of [1,2,3, 4] is NOT 6");
+
       console.log("Expected output of reverse('abcde') is 'edcba'  " + myFunctionTest('edcba', reverse('abcde')));
       console.log("Expected output of reverse('abcde') is 'edcba'  " + myFunctionTest('dcba', reverse('abcde')));
+      console.assert("dcba"=== reverse('abcde'), "Assertion Failed. Because 'dbca' is not the reverse of 'abcde'");
+
       console.log("Expected output of findLongestWord(['a', 'bcd','de']) is '3'  " + myFunctionTest(3, findLongestWord(['a', 'bcd','de'])));
       console.log("Expected output of findLongestWord(['a', 'bcd','de']) is '3'  " + myFunctionTest(2, findLongestWord(['a', 'bcd','de'])));
+      console.assert(2=== findLongestWord(['a', 'bcd','de']), "Assertion Failed. Because length 2 is not the largest word length in ['a', 'bcd','de']");
+
       console.log("Expected output of filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid']) is '[bcd, ABEBE, kid]'  " + myFunctionTest(['bcd','ABEBE','kid'], filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid'],3)));
       console.log("Expected output of filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid']) is '[bcd, ABEBE, kid]'  " + myFunctionTest(['bcd','ABEBE'], filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid'],3)));
+      console.assert(areEqualArrays(['a', 'de'], filterLongWords(['a', 'bcd','de', 'ABEBE', 'kid'],3)) , "Assetion Failed. [bcd, ABEBE, kid] is not the longest words set of length 3 in ['a', 'bcd','de', 'ABEBE', 'kid'] ");
+
       console.log("Expected output of getMultipliedBy10('[1,2,3]') is '[10, 20, 30]'  " + myFunctionTest([10, 20, 30], getMultipliedBy10([1,2,3])));
       console.log("Expected output of getMultipliedBy10('[1,2,3]') is '[10, 20, 30]'  " + myFunctionTest([1, 20, 30], getMultipliedBy10([1,2,3])));
+      console.assert(areEqualArrays([1,20,30],getMultipliedBy10([1,2,3]) ), "Assertion Failed. '[1,20,30]' is not the list whose element multiple of 10 of '[1, 2, 3]'");
+
       console.log("Expected output of getElementsEqualtoThree('[1,2,3, 3]') is '[3, 3]'  " + myFunctionTest([3, 3], getElementsEqualtoThree([1,2,3, 3])));
       console.log("Expected output of getElementsEqualtoThree('[1,2,3, 3]') is '[3, 3]'  " + myFunctionTest([3], getElementsEqualtoThree([1,2,3, 3])));
+      console.assert(areEqualArrays([3],getElementsEqualtoThree([1,2,3, 3])), "Assertion Failed. '[3]' is not the list containing 3s from the list '[1,2,3, 3]'");
+
       console.log("Expected output of getArrayProduct('[1,2,3,4]') is 24  " + myFunctionTest(24, getArrayProduct([1,2,3, 4])));
       console.log("Expected output of getArrayProduct('[1,2,3,4]') is 24  " + myFunctionTest(12, getArrayProduct([1,2,3, 4])));
-
-
+      console.assert(12 === getArrayProduct([1,2,3, 4]), "Assertion Failed. product of '[1, 2, 3, 4]' is not 12. ");
+      //areEqualArrays
     </script>
     
 </head>
