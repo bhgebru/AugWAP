@@ -1,34 +1,47 @@
+/* jshint esversion: 6 */
+"use strict";
 var started=false;
 var timerId=null;
 function isVowel(str) {
-  if((typeof str !== "string"))
+  if((typeof str !== "string")){
     return false;
-  if(str.length > 1)
+  }
+  if(str.length > 1) {
     return false;
+  }
+
   var vowels= ["a", "e", "i", "o", "u"];
-  return (-1 != vowels.indexOf(str));
+  return (-1 !== vowels.indexOf(str));
 }
 function beginsWithVowel(str) {
-  if((typeof str !== "string"))
+  if((typeof str !== "string")) {
     return false;
+  }
+
   var vowels= ["a", "e", "i", "o", "u"];
-  return (-1 != vowels.indexOf(str.charAt(0)));
+  return (-1 !== vowels.indexOf(str.charAt(0)));
 }
 function beginsWithConsonant (str) {
   return (! beginsWithVowel(str) );
 }
 function Malkonichify(str) {
-  if(! str)
+  if(! str) {
     return "";
+  }
+
   var words= str.split(" ");
   var newWords= [];
   for(var i=0; i < words.length; i++) {
-    if (words[i] == " ,")
+    if (words[i] === " ,") {
       continue;
-    if (words[i].length >= 5)
+    }
+
+    if (words[i].length >= 5) {
       newWords.push('Malkovich');
-    else
+    }
+    else {
       newWords.push(words[i]);
+    }
   }
   return newWords.join(" ").trim();
 }
@@ -36,8 +49,10 @@ function Atinlayfy (str) {
   var words= str.split(" ");
   var newWords= [];
   for(var i=0; i < words.length; i++) {
-    if (words[i] == " ,")
+    if (words[i] === " ,") {
       continue;
+    }
+
     var deWord= words[i];
     if(beginsWithConsonant(deWord)) {
       deWord= deWord.substring(1, (deWord.length-1)) + deWord.charAt(0)+ "-ay"
