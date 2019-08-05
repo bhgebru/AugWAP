@@ -11,7 +11,7 @@ window.onload= function(){
     $(".boundary").mouseover(changeBoundary1);
     $(".boundary").mouseover(changeBoundaryPop);
     $("#start").mouseover(start);
-
+alert("          settup :(");
 
   function start(){
     $("h2").text("Click the \"S\" to begin.");
