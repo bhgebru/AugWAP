@@ -1,4 +1,4 @@
-$(function() {
+window.onload= function(){
   $('#start').click(function() {
     startClicked=true;
   });
@@ -55,4 +55,4 @@ $(function() {
     //reset();
   }
 
-});
+};
