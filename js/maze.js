@@ -1,4 +1,5 @@
 window.onload= function(){
+  alert("          Sorry you lose :(");
   $('#start').click(function() {
     startClicked=true;
   });
