@@ -6,11 +6,11 @@ $(function() {
     startClicked=false;
   });
   let startClicked=false;
-
+  $(function(){
     $(".boundary").mouseover(changeBoundary1);
     $(".boundary").mouseover(changeBoundaryPop);
     $("#start").mouseover(start);
-
+  });
 
   function start(){
     $("h2").text("Click the \"S\" to begin.");
