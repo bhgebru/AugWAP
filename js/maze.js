@@ -1,17 +1,16 @@
 window.onload= function(){
-  
-  /*$('#start').click(function() {
+  $('#start').click(function() {
     startClicked=true;
   });
   $('#end').click(function() {
     startClicked=false;
-  });*/
+  });
   let startClicked=false;
 
     $(".boundary").mouseover(changeBoundary1);
     $(".boundary").mouseover(changeBoundaryPop);
     $("#start").mouseover(start);
-    //alert("          settup :(");
+ alert("         TEST ONE. Sorry you lose :(");
 
   function start(){
     $("h2").text("Click the \"S\" to begin.");
