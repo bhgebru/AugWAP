@@ -19,8 +19,8 @@ $(function(){
     //$("#boundary1").mouseover(changeBoundary1);
     //$(".youlose").mouseover(changeBoundary1);
     ////$("#boundery1").mouseleave(changeBoundary1);
-    $(".boundary").mouseover(changeBoundary1);
-    $(".boundary").mouseover(changeBoundaryPop);
+    $(".boundary").mouseover(signalBoundary2);
+    $(".boundary").mouseover(signalBoundary);
     $("#start").mouseover(start);
     
 });
@@ -36,8 +36,8 @@ $(function(){
   }
 
   function trace(){
-    $("#maze").mouseleave(changeBoundary1);
-    $("#maze").mouseleave(changeBoundaryPop);
+    $("#maze").mouseleave(signalBoundary2);
+    $("#maze").mouseleave(signalBoundary);
   }
 
   function end(){
@@ -50,7 +50,7 @@ $(function(){
     startClicked=false;
   }
 
-  function changeBoundaryPop(){
+  function signalBoundary(){
     if(! startClicked ){
       return;
     }
@@ -59,7 +59,7 @@ $(function(){
     startClicked=false;
   }
 
-  function changeBoundary1(){
+  function signalBoundary2  (){
     $(".boundary").each(function(index, e){
       e = $(e);
       e.addClass("youlose");
