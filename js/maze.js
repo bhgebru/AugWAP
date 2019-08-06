@@ -1,11 +1,11 @@
 window.onload= function(){
   
-  $('#start').click(function() {
+  /*$('#start').click(function() {
     startClicked=true;
   });
   $('#end').click(function() {
     startClicked=false;
-  });
+  });*/
   let startClicked=false;
 
     //$(".boundary").mouseover(changeBoundary1);
