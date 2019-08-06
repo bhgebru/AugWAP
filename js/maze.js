@@ -8,9 +8,9 @@ window.onload= function(){
   });*/
   let startClicked=false;
 
-    //$(".boundary").mouseover(changeBoundary1);
-    //$(".boundary").mouseover(changeBoundaryPop);
-    //$("#start").mouseover(start);
+    $(".boundary").mouseover(changeBoundary1);
+    $(".boundary").mouseover(changeBoundaryPop);
+    $("#start").mouseover(start);
 alert("          settup :(");
 
   function start(){
