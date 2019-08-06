@@ -5,6 +5,7 @@ window.onload= function(){
   $('#end').click(function() {
     startClicked=false;
   });
+    alert("         STAAAART. Sorry you lose :(");
   let startClicked=false;
 
     $(".boundary").mouseover(changeBoundary1);
