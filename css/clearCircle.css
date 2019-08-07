@@ -1,4 +1,141 @@
-label {
+#container
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+.circle {
+    position: absolute;
+    top:10px;
+    left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    height: 50px;
+    border: 2px solid brown;
+    border-radius: 50%;
+}
+
+#controls
+{
+    position: fixed;
+    bottom:10px;
+    left: 10px;
+}
+
+tr>td {
+    font-weight: bold;
+    text-align: right;
+    color: dimgray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*label {
   text-align: right;
   width: 150px;
   display: inline-block;
@@ -7,15 +144,22 @@ label {
   margin-left: 150px;
   margin-bottom: 15px;
 }
-/*#main {
+#main {
   position: relative;
-  left: 0;
-  bottom: 0;
-}*/
+
+}
 body, #main, #operations {
-  /*
+  
   position: relative;
-  */
+  
   margin: 2px;
   padding: 2px;
 }
+
+#movable {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+}*/
