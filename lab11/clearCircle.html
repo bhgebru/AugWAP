@@ -8,26 +8,32 @@
   <script src="../js/clearCircle.js" ></script>
 </head>
 <body>
-<div id="main">
-  <div id="content">
-    <p>
-      <label for="width_value">Width: </label><input name="width" id="width_value" class="numberer" type="number" />
-    </p>
-    <p>
-      <label for="growth_amount">Growth Amount: </label> <input name="amount" id="growth_amount"  class="numberer" type="number" />
-    </p>
-    <p>
-      <label for="growth_rate">Growth Rate: </label> <input name="rate" id="growth_rate"  class="numberer"/>
-    </p>
-    <p>
-      <label for="number_circle">Number of Circles: </label> <input name="circle_count" id="number_circle"  class="numberer" type="number" />
-    </p>
-  </div>
-  <div id="operations">
-    <input type="button" id="start_button" value="Start" />  <input type="button" id="stop_button" value="Stop" />
-  </div>
-</div>
+<table id="controls">
+    <tr>
+        <td>Number of Circles</td>
+        <td><input id="txtNoCircles" value="1" type="number"></td>
+    </tr>
+    <tr>
+        <td>Grow rate</td>
+        <td><input id="txtGrowRate" value="250" type="number"></td>
+    </tr>
+    <tr>
+        <td>Growth amount</td>
+        <td><input  id="txtGrowAmount" value="10" type="number"></td>
+    </tr>
+    <tr>
+        <td>Width</td>
+        <td><input id="txtWidth" value="50" type="number"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" id="start" value="Start" type="number"/></td>
+    </tr>
+</table>
 
+<div id="container">
+
+</div>
 
 </body>
 </html>
