@@ -1,93 +1,73 @@
 /*jshint esversion: 6 */
-/*on ready state method using jQuery lib*/
+
 $(function () {
     "use strict";
-
-    /*this module used to handle all events logic*/
-    const circleModule = (function () {
-        let growSize = 10;
-        let growSpeed = 250;
-        let timerID = null;
-        let initialWidth = 50;
-
-        function removeCircle() {
-            $(this).hide();
+    $('#txtWidth').on('change',changedWidth);
+    $('#start').on('click', grow);
+    $('#txtGrowAmount').on('change', growSizeChanged);
+     function changedNOTCircles() {
+        let num = parseInt($('#txtNoCircles').val());
+        $('.circle').remove();
+        for (let i = 0; i < num; i++) {
+            $('#footer').append($('<div>', {
+                'class': 'circle',
+                'css': {
+                    'background-color': "#" + ((1 << 24) * Math.random() | 0).toString(16),
+                    'top': i * 25 + 'px', 'left': i * 20 + 'px'
+                }
+            }));
         }
+    }   
+    let growSize = 10;
+    let growthSpeed = 250;
+    let timerID = null;
+    let initialWidth = 50;
 
-        /*thia method used to create and show circles*/
-        function showCircle() {
-            $('.circle')
-                .css({'width': initialWidth + 'px', 'height': initialWidth + 'px'})
-                .show();
+    function removeCircle() {
+        $(this).hide();
+    }
+
+    function showCircle() {
+        $('.circle')
+            .css({'width': initialWidth + 'px', 'height': initialWidth + 'px'})
+            .show();
+    }
+    
+    function grow() {
+        showCircle();
+        if (timerID) {
+            clearInterval(timerID);
+            timerID = null;
         }
+        timerID = setInterval(circleGrowWith, growthSpeed, growSize);
+    }
+    
+    function changedWidth() {
+        initialWidth = parseInt($('#txtWidth').val());
+        grow();
+    }
 
-        /*this method handles circle width change*/
-        function widthChanged() {
-            initialWidth = parseInt($('#txtWidth').val());
-            startGrow();
-        }
+    function growSizeChanged() {
+        growSize = parseInt($('#txtGrowAmount').val());
+        grow();
+    }
 
-        function growSizeChanged() {
-            growSize = parseInt($('#txtGrowAmount').val());
-            startGrow();
-        }
+    function circleGrowWith(x) {
+        const circle = $('.circle');
+        circle.css({
+            'width': parseInt(circle.css("width")) + x + 'px',
+            'height': parseInt(circle.css("height")) + x + 'px'
+        });
+    }
+    changedNOTCircles();
+    $('#txtGrowRate').on('change', changedGrowthRate);
+    $('#footer').on("click", 'div', removeCircle);       
+    $('#txtNoCircles').on('change', changedNOTCircles); 
+    function changedGrowthRate() {
+        growthSpeed = parseInt($('#txtGrowRate').val());
+        grow();
+    }
 
-        function circleGrowWith(x) {
-            const circle = $('.circle');
-            circle.css({
-                'width': parseInt(circle.css("width")) + x + 'px',
-                'height': parseInt(circle.css("height")) + x + 'px'
-            });
-        }
 
-        /*this method handles circle grow rate change*/
-        function growRateChanged() {
-            growSpeed = parseInt($('#txtGrowRate').val());
-            startGrow();
-        }
-
-        function noCirclesChanged() {
-            let num = parseInt($('#txtNoCircles').val());
-            $('.circle').remove();
-            for (let i = 0; i < num; i++) {
-                $('#container').append($('<div>', {
-                    'class': 'circle',
-                    'css': {
-                        'background-color': "#" + ((1 << 24) * Math.random() | 0).toString(16),
-                        'top': i * 25 + 'px', 'left': i * 20 + 'px'
-                    }
-                }));
-            }
-        }
-
-        /*this method handles circle redraw every specific period*/
-        function startGrow() {
-            showCircle();
-            if (timerID) {
-                clearInterval(timerID);
-                timerID = null;
-            }
-            timerID = setInterval(circleGrowWith, growSpeed, growSize);
-        }
-
-        return {
-            removeCircle: removeCircle,
-            startGrow: startGrow,
-            widthChanged: widthChanged,
-            growSizeChanged: growSizeChanged,
-            growRateChanged: growRateChanged,
-            noCirclesChanged: noCirclesChanged
-        };
-        
-    }());
-
-    /*Attach events*/
-    circleModule.noCirclesChanged();
-    $('#container').on("click", 'div', circleModule.removeCircle);
-    $('#start').on('click', circleModule.startGrow);
-    $('#txtWidth').on('change', circleModule.widthChanged);
-    $('#txtGrowAmount').on('change', circleModule.growSizeChanged);
-    $('#txtGrowRate').on('change', circleModule.growRateChanged);
-    $('#txtNoCircles').on('change', circleModule.noCirclesChanged);
 
 });
