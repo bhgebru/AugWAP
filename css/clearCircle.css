@@ -1,4 +1,20 @@
-#container
+tr>td {
+    font-weight: bold;
+    text-align: right;
+    color: saddlebrown;
+}
+input[type="number"] {
+    border-color: bisque;
+    color: blueviolet;
+}
+
+#fields
+{
+    position: fixed;
+    bottom:10px;
+    left: 10px;
+}
+#footer
 {
     position: relative;
     margin-left: auto;
@@ -17,18 +33,6 @@
     border-radius: 50%;
 }
 
-#controls
-{
-    position: fixed;
-    bottom:10px;
-    left: 10px;
-}
-
-tr>td {
-    font-weight: bold;
-    text-align: right;
-    color: dimgray;
-}
 
 
 
